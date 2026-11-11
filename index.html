@@ -111,31 +111,14 @@ footer{background:#06494f}
 @media(max-width:390px){.dashboard-cards{grid-template-columns:1fr}.dashboard-card{min-height:190px}}
 @media print{nav{display:none!important}main{margin:0!important}.dashboard-hero{background:#fff;border:1px solid #aaa}}
 
-.learner-section{margin:28px 0 10px;padding:22px;background:#fff;border:1px solid #dce7ee;border-radius:24px;box-shadow:0 6px 20px #163e5010}
-.learner-heading{text-align:center;max-width:850px;margin:0 auto 16px}
-.learner-kicker{display:inline-block;background:#e5f4f2;color:#075e65;border-radius:24px;padding:4px 14px;font-size:13px;font-weight:bold}
-.learner-heading h2{color:#07545a;margin:9px 0;font-size:25px}
-.learner-heading p,.learner-intro{color:#5b6d7b;margin:0 auto 14px;line-height:1.9}
-.learner-note{background:#edf6f8;border-right:4px solid #0b7777;padding:14px 16px;border-radius:13px;color:#24465a;margin:14px 0 22px}
-.learner-note-gold{background:#fbf5e8;border-right-color:#c8a45b}
-.learner-subtitle{color:#07545a;font-size:20px;margin:22px 0 12px}
-.learner-cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:13px}
-.learner-card{border:1px solid #dce7ee;border-radius:17px;padding:17px;background:linear-gradient(145deg,#fff,#f6fafc)}
-.learner-icon{font-size:28px}.learner-card h3,.intelligence-card h3{color:#123b50;margin:5px 0}
-.learner-card p,.intelligence-card p{color:#5b6d7b;margin:5px 0 9px}
-.learner-card b,.intelligence-card b{color:#08716f}
-.learner-card ul{margin:6px 0;padding-right:20px;color:#435969}
-.learner-example{background:#eaf5f1;border-radius:10px;padding:9px 11px;color:#17614e;margin-top:10px;font-size:14px}
-.intelligence-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
-.intelligence-card{display:flex;align-items:flex-start;gap:12px;border:1px solid #e1e8ee;border-radius:15px;padding:13px;background:#fbfcfd}
-.intelligence-card>span{font-size:29px;flex:none}.intelligence-card h3{font-size:16px;margin:0 0 3px}
-.intelligence-card p{font-size:13px;margin:0 0 4px}
-.intelligence-card b{font-size:13px}
-.lesson-steps{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px}
-.lesson-steps>div{background:#f3f7fa;border:1px solid #dce7ee;border-radius:14px;padding:13px}
-.lesson-steps b{color:#075e65}.lesson-steps p{margin:5px 0 0;color:#5b6d7b;font-size:13px}
-@media(max-width:700px){.learner-section{padding:14px}.learner-cards,.intelligence-grid{grid-template-columns:1fr}.lesson-steps{grid-template-columns:repeat(2,minmax(0,1fr))}.learner-heading h2{font-size:21px}}
-@media print{.learner-section{box-shadow:none}.learner-card,.intelligence-card,.lesson-steps>div{break-inside:avoid}}
+.extra-heading{margin:26px 0 12px}
+.teaching-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:13px;margin:12px 0 20px}
+.teaching-grid .teaching-card{background:#fff;border:1px solid #dce7ee;border-radius:18px;padding:18px;box-shadow:0 5px 16px #163e500d}
+.teaching-grid .teaching-card h3{color:#07545a;margin:0 0 9px;font-size:18px}
+.teaching-grid .teaching-card p{line-height:1.8;color:#344b5d}
+.teaching-grid .tip{background:#eef7f5;border-right:4px solid #138c8c;border-radius:10px;padding:12px;line-height:1.8}
+.teaching-grid ul{margin:7px 0;padding-right:20px}
+@media(max-width:700px){.teaching-grid{grid-template-columns:1fr}.teaching-grid .teaching-card{padding:14px}}
 </style>
 </head>
 <body>
@@ -166,7 +149,7 @@ footer{background:#06494f}
  <div class="dashboard-cards">
   <button class="dashboard-card card-blue" onclick="go('problems')"><span class="card-art">🔎</span><h3>مشكلات الطلاب وأساليب علاجها</h3><p>دليل شامل لأبرز المشكلات السلوكية والنفسية والدراسية.</p><span class="card-link">استعراض القسم ←</span></button>
   <button class="dashboard-card card-green" onclick="go('strategies')"><span class="card-art">🧠</span><h3>استراتيجيات تعديل السلوك</h3><p>مجموعة من الأساليب والإجراءات الفعالة لتعديل السلوك.</p><span class="card-link">استعراض القسم ←</span></button>
-  <button class="dashboard-card card-purple" onclick="go('teaching')"><span class="card-art">🎓</span><h3>استراتيجيات التدريس الحديثة</h3><p>طرائق تدريس حديثة، وأنماط التعلم، والذكاءات المتعددة وكيفية مراعاتها.</p><span class="card-link">استعراض القسم ←</span></button>
+  <button class="dashboard-card card-purple" onclick="go('teaching')"><span class="card-art">🎓</span><h3>استراتيجيات التدريس الحديثة</h3><p>طرائق وأساليب تدريس مبتكرة لتنويع التعلم ورفع نواتج الطلاب.</p><span class="card-link">استعراض القسم ←</span></button>
   <button class="dashboard-card card-gold" onclick="go('circulars')"><span class="card-art">📑</span><h3>التعاميم والنشرات التربوية</h3><p>تعاميم وزارة التعليم ونشرات تربوية داعمة للممارسة المهنية.</p><span class="card-link">استعراض القسم ←</span></button>
  </div>
  <div class="dashboard-bottom">
@@ -201,40 +184,35 @@ footer{background:#06494f}
   <article class="teaching-card" data-search="التعلم القائم على المشاريع ينفذ الطلاب مشروعاً ممتداً زمنياً ينتج عنه عمل أو منتج حقيقي ويربط المعرفة بالحياة. اختيار سؤال أو قضية، التخطيط، توزيع الأدوار، التنفيذ، عرض المنتج، والتأمل في التعلم. إعداد مشروع لترشيد استهلاك الماء في المدرسة، يتضمن جمع بيانات ومقترحات وحملة توعوية."><h3>9. التعلم القائم على المشاريع</h3><p>ينفذ الطلاب مشروعاً ممتداً زمنياً ينتج عنه عمل أو منتج حقيقي ويربط المعرفة بالحياة.</p><p><b>أدوات وخطوات:</b> اختيار سؤال أو قضية، التخطيط، توزيع الأدوار، التنفيذ، عرض المنتج، والتأمل في التعلم.</p><div class="tip"><b>مثال تطبيقي:</b> إعداد مشروع لترشيد استهلاك الماء في المدرسة، يتضمن جمع بيانات ومقترحات وحملة توعوية.</div></article>
   <article class="teaching-card" data-search="اختيار الاستراتيجية المناسبة لا توجد استراتيجية واحدة تناسب جميع المواقف؛ الاختيار يرتبط بهدف التعلم وخصائص الطلاب والوقت والإمكانات. اسأل: ما هدف الدرس؟ ما خصائص طلابي؟ ما الزمن المتاح؟ ما الموارد؟ وكيف سأقيس التعلم؟ قد يناسب الاستقصاء درساً علمياً، بينما يناسب التعلم التعاوني مهمة جماعية، والتقويم التكويني التحقق من الفهم أثناء الشرح."><h3>10. اختيار الاستراتيجية المناسبة</h3><p>لا توجد استراتيجية واحدة تناسب جميع المواقف؛ الاختيار يرتبط بهدف التعلم وخصائص الطلاب والوقت والإمكانات.</p><p><b>أدوات وخطوات:</b> اسأل: ما هدف الدرس؟ ما خصائص طلابي؟ ما الزمن المتاح؟ ما الموارد؟ وكيف سأقيس التعلم؟</p><div class="tip"><b>مثال تطبيقي:</b> قد يناسب الاستقصاء درساً علمياً، بينما يناسب التعلم التعاوني مهمة جماعية، والتقويم التكويني التحقق من الفهم أثناء الشرح.</div></article>
  </div>
- <div class="notice"><b>توجيه للمعلّم:</b> فاعلية الاستراتيجية لا تقاس بحداثة اسمها، بل بمدى ملاءمتها لهدف التعلم، ومشاركة الطلاب، وتحسن نواتجهم. يمكن الدمج بين أكثر من استراتيجية في الدرس الواحد.</div>
-
- <div class="learner-section">
-  <div class="learner-heading"><span class="learner-kicker">فهم تنوع المتعلمين</span><h2>أنماط التعلم والذكاءات المتعددة لدى الطلاب</h2>
-   <p>مراعاة الفروق الفردية تساعد المعلم على تنويع عرض المحتوى والأنشطة وطرق التقويم، وإتاحة أكثر من طريق للفهم والمشاركة.</p></div>
-  <div class="learner-note"><b>تنبيه تربوي مهم:</b> أنماط التعلم ليست تصنيفات ثابتة للطلاب، ولا ينبغي حصر الطالب في نمط واحد أو منعه من التعلم بطرق أخرى. استخدم التنويع والملاحظة وأدلة تعلم الطالب، ولا تعتمد على اختبار نمط واحد لاتخاذ قرارات تعليمية.</div>
-  <h3 class="learner-subtitle">أولاً: تفضيلات وطرق استقبال التعلم</h3>
-  <div class="learner-cards">
-   <article class="learner-card"><span class="learner-icon">👁️</span><h3>التعلم البصري</h3><p>يفيد بعض الطلاب عرض المعلومات بصرياً من خلال الصور والخرائط والرسوم والمخططات.</p><b>كيف يتعامل المعلم؟</b><ul><li>استخدام الخرائط الذهنية والإنفوجرافيك.</li><li>تلوين المفاهيم وربطها برموز وصور.</li><li>عرض خطوات الحل في مخطط متسلسل.</li></ul><div class="learner-example">مثال: خريطة مفاهيم تلخص مراحل دورة الماء.</div></article>
-   <article class="learner-card"><span class="learner-icon">👂</span><h3>التعلم السمعي</h3><p>قد يستفيد بعض الطلاب من الشرح والحوار والاستماع والمناقشة والتعبير الشفهي.</p><b>كيف يتعامل المعلم؟</b><ul><li>الحوار وطرح الأسئلة والمناقشة.</li><li>السماح بشرح الفكرة بصوت الطالب.</li><li>استخدام التسجيلات والقراءة الجهرية عند ملاءمتها.</li></ul><div class="learner-example">مثال: يشرح الطالب لزميله خطوات حل مسألة.</div></article>
-   <article class="learner-card"><span class="learner-icon">✍️</span><h3>التعلم بالقراءة والكتابة</h3><p>يستفيد بعض الطلاب من قراءة النصوص وتدوين الملاحظات وإعادة صياغة المعلومات.</p><b>كيف يتعامل المعلم؟</b><ul><li>تقديم ملخصات ونصوص قصيرة واضحة.</li><li>إعداد بطاقات مفاهيم وأسئلة كتابية.</li><li>تكليف الطلاب بكتابة خلاصة أو خطوات الحل.</li></ul><div class="learner-example">مثال: كتابة ثلاثة أفكار رئيسية بعد قراءة فقرة.</div></article>
-   <article class="learner-card"><span class="learner-icon">🧩</span><h3>التعلم الحركي والتطبيقي</h3><p>يفضل بعض الطلاب التعلم بالممارسة والتجريب وبناء النماذج والأنشطة العملية.</p><b>كيف يتعامل المعلم؟</b><ul><li>توظيف التجارب والمحاكاة والأدوات التعليمية.</li><li>إتاحة التعلم بالمحطات والمهام العملية.</li><li>ربط المفاهيم بمواقف حياتية وتطبيقات.</li></ul><div class="learner-example">مثال: استخدام مكعبات أو أشكال هندسية لفهم الكسور.</div></article>
-  </div>
-  <h3 class="learner-subtitle">ثانياً: الذكاءات المتعددة وفق إطار هوارد جاردنر</h3>
-  <p class="learner-intro">يقدم هذا الإطار طرقاً متنوعة للنظر إلى نقاط القوة والقدرات؛ ويمكن للمعلم تنويع الأنشطة لإتاحة فرص متعددة لإظهار الفهم، دون وضع الطلاب في قوالب ثابتة.</p>
-  <div class="intelligence-grid">
-   <article class="intelligence-card"><span>🗣️</span><div><h3>الذكاء اللغوي</h3><p>التعبير بالكلمات والقراءة والكتابة.</p><b>نشاط مناسب:</b> كتابة قصة أو تقديم عرض شفهي.</div></article>
-   <article class="intelligence-card"><span>🔢</span><div><h3>الذكاء المنطقي الرياضي</h3><p>الاستدلال وتحليل العلاقات وحل المشكلات.</p><b>نشاط مناسب:</b> حل لغز أو تحليل بيانات.</div></article>
-   <article class="intelligence-card"><span>🧭</span><div><h3>الذكاء البصري المكاني</h3><p>تصور الأشكال والعلاقات المكانية.</p><b>نشاط مناسب:</b> رسم مخطط أو تصميم نموذج.</div></article>
-   <article class="intelligence-card"><span>🎵</span><div><h3>الذكاء الموسيقي</h3><p>تمييز الإيقاع والأنماط والنغمات.</p><b>نشاط مناسب:</b> ابتكار إيقاع يساعد على تذكر تسلسل.</div></article>
-   <article class="intelligence-card"><span>🤸</span><div><h3>الذكاء الجسمي الحركي</h3><p>التعلم من خلال الحركة واستخدام الجسد.</p><b>نشاط مناسب:</b> تمثيل مفهوم أو تنفيذ تجربة.</div></article>
-   <article class="intelligence-card"><span>🤝</span><div><h3>الذكاء الاجتماعي</h3><p>التفاعل وفهم الآخرين والعمل معهم.</p><b>نشاط مناسب:</b> تعلم تعاوني أو لعب أدوار.</div></article>
-   <article class="intelligence-card"><span>🌱</span><div><h3>الذكاء الطبيعي</h3><p>ملاحظة عناصر البيئة وتصنيفها وفهمها.</p><b>نشاط مناسب:</b> تصنيف النباتات أو دراسة البيئة.</div></article>
-   <article class="intelligence-card"><span>🪞</span><div><h3>الذكاء الذاتي</h3><p>فهم الذات والتأمل وتحديد الأهداف.</p><b>نشاط مناسب:</b> سجل تأمل ذاتي أو خطة تعلم شخصية.</div></article>
-  </div>
-  <h3 class="learner-subtitle">كيف يوظف المعلم ذلك في درس واحد؟</h3>
-  <div class="lesson-steps">
-   <div><b>1. هدف واحد واضح</b><p>حدد ناتج التعلم الذي تريد من جميع الطلاب تحقيقه.</p></div>
-   <div><b>2. مداخل متنوعة</b><p>اعرض المفهوم بصورة أو نص أو شرح شفهي أو تجربة عملية.</p></div>
-   <div><b>3. أنشطة متعددة</b><p>اسمح للطلاب بالمناقشة أو الرسم أو الحل أو بناء نموذج أو العمل ضمن فريق.</p></div>
-   <div><b>4. تقويم عادل ومتعدد</b><p>استخدم سؤالاً شفهياً أو مهمة كتابية أو أداءً عملياً وفق هدف الدرس ومعايير واضحة.</p></div>
-  </div>
-  <div class="learner-note learner-note-gold"><b>قاعدة تطبيقية:</b> نوّع طرق التدريس والأنشطة، مع الحفاظ على هدف تعلم مشترك وتوقعات عالية من جميع الطلاب، وامنح كل طالب فرصاً مختلفة للتدرب وإظهار ما تعلمه.</div>
+ 
+ <div class="section-title extra-heading"><h2>أنماط التعلم والذكاءات المتعددة</h2></div>
+ <div class="notice"><b>تنبيه تربوي:</b> أنماط التعلم والذكاءات المتعددة أطر تساعد المعلم على تنويع التدريس وفهم نقاط القوة، وليست تصنيفات ثابتة للطلاب أو اختبارات تشخّص قدراتهم. لا تحصر الطالب في نمط واحد؛ نوّع الخبرات وأتح فرصاً متعددة للجميع.</div>
+ <div class="teaching-grid">
+  <article class="teaching-card" data-search="أنماط التعلم البصري السمعي الحركي القراءة الكتابة تنويع التدريس"><h3>1. النمط البصري</h3><p><b>يفضّل الاستفادة من:</b> الصور، الخرائط الذهنية، المخططات، الألوان، الفيديو والعروض.</p><div class="tip"><b>تعامل المعلم:</b> اعرض المفاهيم بصرياً، واستخدم الرسوم والجداول، واطلب من الطلاب رسم مخطط يلخص الفكرة.</div></article>
+  <article class="teaching-card" data-search="النمط السمعي الاستماع المناقشة الحوار الشرح"><h3>2. النمط السمعي</h3><p><b>تساعده:</b> المناقشة، الشرح الشفهي، الحوار، القراءة الجهرية والتسجيلات الصوتية.</p><div class="tip"><b>تعامل المعلم:</b> استخدم الأسئلة الشفهية، وفكر بصوت مسموع، وشجع الطالب على شرح الفكرة لزميله.</div></article>
+  <article class="teaching-card" data-search="النمط الحركي العملي التجربة التطبيق المحاكاة التعلم بالممارسة"><h3>3. النمط الحركي / العملي</h3><p><b>يتفاعل مع:</b> التجارب، المحاكاة، الأنشطة اليدوية، لعب الأدوار والتعلم بالممارسة.</p><div class="tip"><b>تعامل المعلم:</b> قدم مهاماً تطبيقية قصيرة، ومحطات تعلم، وتجارب آمنة مرتبطة بهدف الدرس.</div></article>
+  <article class="teaching-card" data-search="القراءة والكتابة نمط التعلم النصوص التلخيص تدوين الملاحظات"><h3>4. القراءة والكتابة</h3><p><b>يستفيد من:</b> النصوص، تدوين الملاحظات، القوائم، التلخيص والكتابة المنظمة.</p><div class="tip"><b>تعامل المعلم:</b> وفر نصوصاً مناسبة، وأسئلة كتابية، وبطاقات مفاهيم، وفرصة لتلخيص التعلم.</div></article>
  </div>
+ <div class="section-title extra-heading"><h2>الذكاءات المتعددة وكيفية مراعاتها</h2></div>
+ <div class="teaching-grid">
+  <article class="teaching-card" data-search="الذكاء اللغوي القراءة الكتابة التعبير القصص"><h3>الذكاء اللغوي</h3><p>يتجلى في استخدام اللغة والتعبير والقراءة والكتابة.</p><div class="tip"><b>نشاط مناسب:</b> كتابة قصة، مناظرة، تلخيص أو عرض شفهي.</div></article>
+  <article class="teaching-card" data-search="الذكاء المنطقي الرياضي التحليل الأرقام حل المشكلات"><h3>الذكاء المنطقي الرياضي</h3><p>يرتبط بالاستدلال، اكتشاف الأنماط، الأرقام وحل المشكلات.</p><div class="tip"><b>نشاط مناسب:</b> ألغاز، تجارب، تصنيف بيانات ومسائل حياتية.</div></article>
+  <article class="teaching-card" data-search="الذكاء البصري المكاني الرسم التصميم الخرائط"><h3>الذكاء البصري المكاني</h3><p>يرتبط بتصور الأشكال والعلاقات المكانية والتمثيل البصري.</p><div class="tip"><b>نشاط مناسب:</b> رسم نموذج، خريطة مفاهيم، تصميم ملصق أو مجسم.</div></article>
+  <article class="teaching-card" data-search="الذكاء الجسمي الحركي الحركة الأداء التمثيل البناء"><h3>الذكاء الجسمي الحركي</h3><p>يظهر في التعلم من خلال الحركة واستخدام اليدين والأداء.</p><div class="tip"><b>نشاط مناسب:</b> تجربة عملية، بناء نموذج، تمثيل موقف أو نشاط حركي.</div></article>
+  <article class="teaching-card" data-search="الذكاء الموسيقي الإيقاع النغم الصوت"><h3>الذكاء الموسيقي</h3><p>يتصل بإدراك الإيقاع والأنماط الصوتية والنغم.</p><div class="tip"><b>نشاط مناسب:</b> إيقاع لفظي أو إنشاد تعليمي مناسب للبيئة المدرسية.</div></article>
+  <article class="teaching-card" data-search="الذكاء الاجتماعي التفاعل التعاون القيادة العمل الجماعي"><h3>الذكاء الاجتماعي</h3><p>يتصل بفهم الآخرين والتواصل والتعاون والعمل ضمن فريق.</p><div class="tip"><b>نشاط مناسب:</b> تعلم تعاوني، تدريس الأقران، حل مشكلة جماعية.</div></article>
+  <article class="teaching-card" data-search="الذكاء الذاتي التأمل معرفة الذات الاستقلال تحديد الأهداف"><h3>الذكاء الذاتي</h3><p>يتصل بفهم الفرد لنفسه ودوافعه ومشاعره وأهدافه.</p><div class="tip"><b>نشاط مناسب:</b> يوميات تعلم، تأمل ذاتي، تحديد هدف وخطة إنجاز.</div></article>
+  <article class="teaching-card" data-search="الذكاء الطبيعي البيئي النباتات الحيوانات البيئة التصنيف"><h3>الذكاء الطبيعي</h3><p>يتصل بملاحظة عناصر الطبيعة وتصنيف الكائنات والظواهر البيئية.</p><div class="tip"><b>نشاط مناسب:</b> رصد نباتات المدرسة، تصنيف عينات، مشروع بيئي.</div></article>
+ </div>
+ <div class="notice"><b>كيف يطبق المعلم ذلك؟</b> يخطط للدرس بأكثر من مدخل: صورة أو مخطط، حوار، نشاط عملي، مهمة كتابية، وعمل تعاوني. يلاحظ تفاعل الطلاب ويقوّم تعلمهم بأدلة متنوعة، دون إطلاق أحكام ثابتة على قدراتهم.</div>
+ <div class="section-title extra-heading"><h2>خصائص النمو وطرق التعامل معها حسب المرحلة الدراسية</h2></div>
+ <div class="teaching-grid">
+  <article class="teaching-card" data-search="المرحلة الابتدائية خصائص النمو الجسمي الحركي العقلي المعرفي الانفعالي الاجتماعي التعامل"><h3>المرحلة الابتدائية</h3><p><b>خصائص النمو:</b> نمو جسمي وحركي متدرج، حاجة إلى الحركة واللعب، تفكير محسوس يتطور تدريجياً، حب الاستطلاع، الحاجة إلى التشجيع والشعور بالأمان، وتأثر واضح بالأسرة والمعلم والأقران.</p><div class="tip"><b>كيف يتعامل المعلم؟</b><ul><li>استخدم التعليم باللعب والمحسوسات والصور والقصص.</li><li>قسّم المهام إلى خطوات قصيرة وواضحة.</li><li>عزز السلوك الإيجابي فور حدوثه، وقدم تغذية راجعة مشجعة.</li><li>ضع قواعد قليلة وثابتة وعلّمها بالممارسة والقدوة.</li><li>راعِ الفروق الفردية، وأتح فرص الحركة والأنشطة الآمنة.</li></ul></div></article>
+  <article class="teaching-card" data-search="المرحلة المتوسطة المراهقة المبكرة النمو الجسمي الانفعالي الاجتماعي الاستقلال الهوية الأقران التعامل"><h3>المرحلة المتوسطة</h3><p><b>خصائص النمو:</b> تغيرات جسمية سريعة وبداية البلوغ، حساسية انفعالية، اهتمام بالقبول بين الأقران، رغبة في الاستقلال وإثبات الذات، وتطور التفكير المجرد والقدرة على النقاش.</p><div class="tip"><b>كيف يتعامل المعلم؟</b><ul><li>احترم الطالب وتجنب السخرية أو الإحراج أمام زملائه.</li><li>استمع إليه وامنحه خيارات ومسؤوليات مناسبة.</li><li>استخدم الحوار والتعلم التعاوني وحل المشكلات.</li><li>وضح التوقعات والحدود بعدل وثبات مع حفظ الخصوصية.</li><li>قدم توجيهاً حول إدارة الانفعالات والعلاقات الرقمية والاجتماعية.</li></ul></div></article>
+  <article class="teaching-card" data-search="المرحلة الثانوية المراهقة المتأخرة النمو العقلي التفكير المجرد التخطيط المستقبل الهوية الاستقلال المهني التعامل"><h3>المرحلة الثانوية</h3><p><b>خصائص النمو:</b> مزيد من النضج الجسمي، تطور التفكير المجرد والنقدي والتخطيط، تكوين الهوية والقيم، اهتمام بالمستقبل المهني والجامعي، وحاجة إلى الاستقلال واتخاذ القرار.</p><div class="tip"><b>كيف يتعامل المعلم؟</b><ul><li>أشرك الطلاب في النقاش والبحث والمشروعات الأصيلة.</li><li>كلفهم بمهام تتطلب التحليل والتقويم واتخاذ القرار.</li><li>اربط التعلم بالحياة والتخصصات والمهن.</li><li>امنحهم مساحة للمبادرة والقيادة مع متابعة داعمة.</li><li>ساعدهم على تحديد أهداف واقعية وإدارة الوقت والاستعداد للمستقبل.</li></ul></div></article>
+ </div>
+ <div class="notice"><b>ملاحظة نمائية:</b> الخصائص المذكورة اتجاهات عامة وليست أحكاماً تنطبق على كل طالب؛ فالنمو يختلف باختلاف الفرد والبيئة والخبرات. راعِ الفروق الفردية، واطلب دعم المختصين عند وجود مؤشرات تستدعي ذلك.</div>
+ <div class="notice"><b>توجيه للمعلّم:</b> فاعلية الاستراتيجية لا تقاس بحداثة اسمها، بل بمدى ملاءمتها لهدف التعلم، ومشاركة الطلاب، وتحسن نواتجهم. يمكن الدمج بين أكثر من استراتيجية في الدرس الواحد.</div>
 </section>
 <section id="circulars" class="page">
  <div class="section-title"><h2>التعاميم والنشرات التربوية</h2><button class="btn print" onclick="window.print()">طباعة</button></div>
